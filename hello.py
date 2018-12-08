@@ -1,7 +1,7 @@
 def application(env, start_response):
-	start_response('200 OK', [('Content/type', 'text/plain')])
-	return [i + '\n' for i in env['QUERY_STRING'].split('&')]
-#	[i + '\n' for i in env['QUERY_STRING'].split(&)]
+	start_response('200 OK', [('Content-Type', 'text/plain')])
+	return env['QUERY_STRING'].replace('&', '\n') + '\n'
+
 
 
 
