@@ -15,12 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from qa import views
-
-print 22222222
+from qa.views import test
 
 urlpatterns = [
-    url(r'^', include('qa.urls')),
+#    url(r'^$', include('qa.urls')),
+    url(r'^', test),
     url(r'^admin/', admin.site.urls),
 #    url(r'^login/$'),
 #    url(r'^signup/$'),
@@ -29,6 +28,4 @@ urlpatterns = [
 #    url(r'^popular/$'),
 #    url(r'^new/$')
 ]
-
-print urlpatterns
 
