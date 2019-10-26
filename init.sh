@@ -1,3 +1,6 @@
+git config --global user.name ealnur
+git config --global user.email ilnur.ismagilov@gmail.com
+
 sudo /etc/init.d/mysql start
 mysql -uroot -e "create database stepic_web;"
 mysql -uroot -e "grant all privileges on stepic_web.* to 'box'@'localhost' with grant option;"
